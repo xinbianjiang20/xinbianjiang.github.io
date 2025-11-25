@@ -21,6 +21,11 @@ jobs:
           npm run build
           git lfs track ${{github.workspace}}/.next/*
           git add .gitattributes
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-output
+          path: ${{github.workspace}}/out
       - name: deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
