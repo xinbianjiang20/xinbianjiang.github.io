@@ -22,10 +22,10 @@ jobs:
           git lfs track ${{github.workspace}}/.next/*
           git add .gitattributes
       - name: Upload Artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v4
         with:
           name: my-artifacts
-          path: ${{github.workspace}}/.next
+          path: .next
       - name: deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
