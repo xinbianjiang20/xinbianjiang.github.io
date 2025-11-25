@@ -24,7 +24,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v5
         with:
-          path: ${{github.workspace}}/out
+          path: ${{github.workspace}}/.next
       - name: deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
